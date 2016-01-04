@@ -1,5 +1,5 @@
 # twitchbots-node
-Ready to use node.js module for the twitchbots.info API.
+Ready to use node.js module for the [twitchbots.info](https://twitchbots.info) API.
 
 ## Instalation
 To add this module to your node project just run `npm install --save twitchbots-node`.
