@@ -6,10 +6,10 @@
  */
 "use strict";
 
-var TwitchBots = require("twitchbots-base");
-var fetch = require("node-fetch");
+const TwitchBots = require("twitchbots-base");
+const fetch = require("node-fetch");
 
-var requestWrapper = function(url) {
+const requestWrapper = (url) => {
     return fetch(url).then((res) => {
         if(res.ok) {
             return res.json();
