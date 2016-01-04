@@ -1,0 +1,34 @@
+{
+  "name": "twitchbots-node",
+  "version": "1.0.0",
+  "description": "Ready to use node.js module for the twitchbots.info API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freaktechnik/twitchbots-node.git"
+  },
+  "keywords": [
+    "twitch",
+    "bot",
+    "node",
+    "api",
+    "chat",
+    "irc",
+    "helper"
+  ],
+  "author": "Martin Giger (https://humanoids.be)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/freaktechnik/twitchbots-node/issues"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "homepage": "https://github.com/freaktechnik/twitchbots-node#readme",
+  "dependencies": {
+    "node-fetch": "^1.3.3"
+  }
+}
