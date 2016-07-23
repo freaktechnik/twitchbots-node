@@ -1,4 +1,6 @@
 # twitchbots-node
+[![Dependency Status](https://dependencyci.com/github/freaktechnik/twitchbots-node/badge)](https://dependencyci.com/github/freaktechnik/twitchbots-node)
+
 Ready to use node.js module for the [twitchbots.info](https://twitchbots.info) API.
 
 ## Instalation
