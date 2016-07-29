@@ -17,7 +17,7 @@ const requestWrapper = (url) => {
         else {
             throw {
                 code: res.status,
-                text: res.text()
+                text: res.statusText
             };
         }
     }, (error) => {
