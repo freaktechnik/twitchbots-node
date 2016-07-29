@@ -1,6 +1,6 @@
 {
   "name": "twitchbots-node",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Ready to use node.js module for the twitchbots.info API",
   "main": "index.js",
   "scripts": {
