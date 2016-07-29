@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run lint && nyc ava",
-    "coverage": "nyc report --reporter=test-lcov > coverage.lcov && codecov",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "lint": "eslint index.js test/"
   },
   "repository": {
