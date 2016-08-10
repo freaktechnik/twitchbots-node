@@ -1,17 +1,4 @@
 {
-	"parser": "babel-eslint",
-	"parserOptions": {
-		"ecmaVersion": 7,
-		"sourceType": "module"
-	},
-	"plugins": [
-		"ava",
-		"babel"
-	],
-	"rules": {
-		"babel/arrow-parens": 1,
-		"babel/generator-star-spacing": 1
-	},
-	"extends": "plugin:ava/recommended"
+	"extends": "plugin:freaktechnik/test"
 }
 

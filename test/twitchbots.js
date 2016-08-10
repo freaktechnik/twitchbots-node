@@ -20,7 +20,7 @@ const closeServer = (server) => {
 
 test("request implementation returns promise", (t) => {
     t.is(typeof tb.request, "function");
-    const p = tb.request("http://localhost")
+    const p = tb.request("http://localhost");
     t.true("then" in p);
     t.throws(p);
 });
@@ -28,7 +28,7 @@ test("request implementation returns promise", (t) => {
 test("request implementation success for existing endpoint", async (t) => {
     const server = await createServer();
 
-    const resp = await tb.request("http://localhost:"+server.address().port+"/exists");
+    const resp = await tb.request(`http://localhost:${server.address().port}/exists`);
 
     t.deepEqual(resp, { foo: "bar" });
 
@@ -38,14 +38,14 @@ test("request implementation success for existing endpoint", async (t) => {
 test("request implementation fails for inexistant endpoint", async (t) => {
     const server = await createServer();
 
-    const resp = await t.throws(tb.request("http://localhost:"+server.address().port+"/error"));
+    const resp = await t.throws(tb.request(`http://localhost:${server.address().port}/error`));
     t.deepEqual(resp, { code: 404, text: "Not Found" });
 
     closeServer(server);
 });
 
 test("request implementation fails for non-answering endpoint", async (t) => {
-     const resp = await t.throws(tb.request("http://localhost/error"));
-     t.is(resp.code, 0);
+    const resp = await t.throws(tb.request("http://error.localhost:/error"));
+    t.is(resp.code, 0);
 });
 
