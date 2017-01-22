@@ -1,4 +1,6 @@
 # twitchbots-node
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/freaktechnik/twitchbots-node.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/freaktechnik/twitchbots-node.svg?branch=master)](https://travis-ci.org/freaktechnik/twitchbots-node) [![codecov](https://codecov.io/gh/freaktechnik/twitchbots-node/branch/master/graph/badge.svg)](https://codecov.io/gh/freaktechnik/twitchbots-node) [![Dependency Status](https://dependencyci.com/github/freaktechnik/twitchbots-node/badge)](https://dependencyci.com/github/freaktechnik/twitchbots-node)
 
 Ready to use node.js module for the [twitchbots.info](https://twitchbots.info) API.
