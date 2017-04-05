@@ -22,7 +22,7 @@ test("request implementation returns promise", (t) => {
     t.is(typeof tb.request, "function");
     const p = tb.request("http://localhost");
     t.true("then" in p);
-    t.throws(p);
+    return t.throws(p);
 });
 
 test("request implementation success for existing endpoint", async (t) => {
@@ -48,4 +48,3 @@ test("request implementation fails for non-answering endpoint", async (t) => {
     const resp = await t.throws(tb.request("http://error.localhost:/error"));
     t.is(resp.code, 0);
 });
-
