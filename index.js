@@ -9,22 +9,19 @@
 const TwitchBots = require("twitchbots-base"),
     fetch = require("node-fetch"),
 
-    requestWrapper = (url) => {
-        return fetch(url).then((res) => {
-            if(res.ok) {
-                return res.json();
-            }
-            else {
-                throw {
-                    code: res.status,
-                    text: res.statusText
-                };
-            }
-        }, (error) => {
-            error.code = 0;
-            throw error;
-        });
-    };
+    requestWrapper = (url) => fetch(url).then((res) => {
+        if(res.ok) {
+            return res.json();
+        }
+
+        throw {
+            code: res.status,
+            text: res.statusText
+        };
+    }, (error) => {
+        error.code = 0;
+        throw error;
+    });
 
 module.exports = new TwitchBots({
     request: requestWrapper

@@ -14,9 +14,7 @@ const createServer = () => {
     });
 };
 
-const closeServer = (server) => {
-    return new Promise((resolve) => server.close(resolve));
-};
+const closeServer = (server) => new Promise((resolve) => server.close(resolve));
 
 test("request implementation returns promise", (t) => {
     t.is(typeof tb.request, "function");
@@ -39,7 +37,10 @@ test("request implementation fails for inexistant endpoint", async (t) => {
     const server = await createServer();
 
     const resp = await t.throws(tb.request(`http://localhost:${server.address().port}/error`));
-    t.deepEqual(resp, { code: 404, text: "Not Found" });
+    t.deepEqual(resp, {
+        code: 404,
+        text: "Not Found"
+    });
 
     closeServer(server);
 });
