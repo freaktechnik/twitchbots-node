@@ -1,5 +1,5 @@
 import test from 'ava';
-import tb from '../';
+import tb from '..';
 import express from 'express';
 
 const createServer = () => {
